@@ -1,0 +1,77 @@
+me: Adrian Jimenez
+
+Login: cs30xib
+
+Description: This program passes a width, height, border character and diamond
+             character in order to display a diamond.
+
+How to compile: typing "make" in the command prompt.
+
+How to run it: typing "the file name, width, height, border character,
+               diamond character" in the command prompt.
+
+An example of normal output: type "./pa1 11 9 42 57" in command prompt
+***********
+*****9*****
+****999****
+***99999***
+**9999999**
+*999999999*
+**9999999**
+***99999***
+****999****
+*****9*****
+***********
+                             and it goes to stdout.
+
+An example of abnormal/error output: type "./pa1 -2 0 5 5" in the prompt
+
+        width(-2) must be within the range of [3 - 21]
+
+        width(-2) must be an odd number.
+
+        heigth(0) must be within the range of [1 - 19]
+
+        height(0) must be an odd number.
+
+        height(0) must be less than width(-2)
+
+        border_ch(5) must be an ASCII code in the range [33 - 126]
+
+        diamond_ch(5) must be an ASCII code in the range [33 - 126]
+
+        border_ch(5) and diamond_ch(5) must be different
+
+                                      and it goes to stderr.
+
+How I tested program:
+./pa1 -2 0 5 5
+./pa1 9999999999 123abc 6 6
+./pa1 11 9 42 57
+./pa1 19 15 35 45
+./pa1 
+./pa1 10 9 50 52
+./pa1 21 23 38 48
+
+Anything else: start early on this assignment. Also this prints a diamond in
+the character of choice.
+
+1) p/x $i0
+   x/s 0xffbff2ae
+
+2) p/d $i2
+
+3) p/x $i1
+   next
+
+4) print num
+
+5) p/c *endptr
+6) p/s endptr
+7) print errno
+   print errno
+8) git status
+9) git rm
+10) git diff 
+
+
