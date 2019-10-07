@@ -1,0 +1,128 @@
+Filename: README
+
+Author: Adrian Jimenez
+
+Login: cs30xib
+
+Description: This program is for multi-threading computation. This helps speed
+             up the calculations by splitting the work over multiple cores.
+
+Date: Nov. 22, 2013
+
+Sources of Help: Tutors and Discussion.
+
+
+How to compile: Typing "make" in the command prompt.
+
+How to run it: Typing "the executable file" in the command prompt.
+
+An example of normal output: Type "% ./isPrime"
+Number of threads = 64
+
+Sequential isPrime for 489133282872437277
+489133282872437277 is not prime
+Completed in 3e-06 sec
+
+Async-get parallel isPrime for 489133282872437277
+489133282872437277 is not prime
+Completed in 3.48563 sec
+
+Speed-up: 8.60677e-07
+
+--------------
+
+Sequential isPrime for 87178291199
+87178291199 is prime
+Completed in 0.019311 sec
+
+Async-get parallel isPrime for 87178291199
+87178291199 is prime
+Completed in 0.003652 sec
+
+Speed-up: 5.28779
+
+--------------
+
+Sequential isPrime for 70368760954879
+70368760954879 is prime
+Completed in 0.514269 sec
+
+Async-get parallel isPrime for 70368760954879
+70368760954879 is prime
+Completed in 0.040951 sec
+
+Speed-up: 12.5582
+
+--------------
+
+Sequential isPrime for 688846502588399
+688846502588399 is prime
+Completed in 1.62129 sec
+
+Async-get parallel isPrime for 688846502588399
+688846502588399 is prime
+Completed in 0.143876 sec
+
+Speed-up: 11.2686
+
+--------------
+
+Sequential isPrime for 32361122672259149
+32361122672259149 is prime
+Completed in 11.449 sec
+
+Async-get parallel isPrime for 32361122672259149
+32361122672259149 is prime
+Completed in 0.885037 sec
+
+Speed-up: 12.9361
+
+--------------
+
+Sequential isPrime for 489133282872437279
+489133282872437279 is prime
+Completed in 50.8483 sec
+
+Async-get parallel isPrime for 489133282872437279
+489133282872437279 is prime
+Completed in 3.49117 sec
+
+Speed-up: 14.5648
+
+--------------
+
+Sequential isPrime for 790738119649411319
+790738119649411319 is prime
+Completed in 62.0438 sec
+
+Async-get parallel isPrime for 790738119649411319
+790738119649411319 is prime
+Completed in 4.54111 sec
+
+Speed-up: 13.6627
+
+--------------
+
+Sequential isPrime for 6312646216567629137
+6312646216567629137 is prime
+Completed in 221.813 sec
+
+Async-get parallel isPrime for 6312646216567629137
+6312646216567629137 is prime
+Completed in 14.6703 sec
+
+Speed-up: 15.1198
+
+--------------
+
+
+
+Anything else: Start early on this assignment. Also this program is great for
+               optimization. I divided up the work on multiple cores
+
+(1) Having a mechanism that upon a thread's detection of the number being
+    non-prime throws an exception/interrupt (a signal), notifying the other
+    threads to stop execting and return immidiately rather than having a
+    global flag variable that is checked every time through the loop making
+    the number of instructions increase by the number of times through the
+    loops times the number of threads which could slow down the program.

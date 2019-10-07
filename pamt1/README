@@ -1,0 +1,85 @@
+Filename: README
+
+Author: Adrian Jimenez
+
+Login: cs30xib
+
+Description: This program is for multi-threading computation. This helps speed
+             up the calculations by splitting the work over multiple cores.
+
+Date: Nov. 7, 2013
+
+Sources of Help: Tutors and Discussion.
+
+
+How to compile: Typing "make" in the command prompt.
+
+How to run it: Typing "the executable file and the size of the array" in the
+               command prompt.
+
+An example of normal output: Type "% ./squaredSumMinMax 987654321"
+
+Initializing array (size = 987654321) with random values
+
+......................... Done
+
+Sequential squared sum, min, max (be patient)
+Squared Sum is: 2681271620839
+Min value is: -128
+Max value is: 127
+Completed in 2.357244 sec
+
+Async-get parallel squared sum, min, max
+Number of threads = 64
+Squared Sum is: 2681271620839
+Min value is: -128
+Max value is: 127
+Completed in 0.307878 sec
+
+Speed-up: 7.656422
+
+
+An example of abnormal/error output: Type "% ./squaredSumMinMax"
+
+Usage: ./squaredSumMinMax array_size
+   array_size  (must be positive integer)
+
+
+How I tested program:
+% ./squaredSumMinMax 100abc
+Initializing array (size = 100) with random values
+
+. Done
+
+Sequential squared sum, min, max (be patient)
+Squared Sum is: 297552
+Min value is: -114
+Max value is: 127
+Completed in 0.000001 sec
+
+Async-get parallel squared sum, min, max
+Number of threads = 64
+Squared Sum is: 297552
+Min value is: -114
+Max value is: 127
+Completed in 0.002260 sec
+
+Speed-up: 0.000442
+
+
+Anything else: Start early on this assignment. Also this program is great for
+               optimization. I divides up the work on multiple cores.
+
+1) The sequential computation is so much faster than parallel computation for
+   small arrays is because sequential computation does not take that long.
+   It computes the results faster than if we had to calculate how to split up
+   the work and then calculate. But for large arrays, obviously splitting up
+   the work speeds things up.
+
+2) When the array size is 1000074, the speed-up time is about 1. 
+
+3) speed up for 500000000 is 2.961820
+   speed up for 500 is 0.002230
+
+4) my speed-up time was 1.014787 when using array size of 300000
+

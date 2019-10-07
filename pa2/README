@@ -1,0 +1,119 @@
+Author: Adrian Jimenez
+
+Login: cs30xib
+
+Description: This program displays 2 banks of lights and allows to be 
+             modified to the likings of the user.
+
+How to compile: Typing "make" in the command prompt.
+
+How to run it: 2 cases
+	case 1: typing "the file name and the input file" in the command prompt.
+
+	case 2: typing "the file name" in the command prompt.
+
+An example of normal output: type "./pa2" in command prompt
+---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+> set 2 3
+---- ---- ---- ---- ---- ---- ---- --*- ---- ---- ---- ---- ---- ---- ---- --**
+> quit
+	and it goes it stdout.
+
+An example of abnormal/error output: type "./pa2" in the prompt
+> set 
+ 
+  Argument(s) required for this command. Type "help" for more info.
+>
+	and it goes to stderr.
+
+How I tested program:
+% ./pa2 
+---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
+> help 
+The available commands are: 
+	set bank0BitPattern bank1BitPattern 
+  	clear bank0BitPattern bank1BitPattern 
+   	toggle bank0BitPattern bank1BitPattern 
+	shift shiftCount 
+     	rotate rotateCount 
+     	ripple rippleCount 
+       	help 
+        quit 
+> set 0x12345678 1 
+---* --*- --** -*-- -*-* -**- -*** *--- ---- ---- ---- ---- ---- ---- ---- ---* 
+> toggle 1 037 
+---* --*- --** -*-- -*-* -**- -*** *--* ---- ---- ---- ---- ---- ---- ---* ***- 
+> clear 0x20 10 
+---* --*- --** -*-- -*-* -**- -*-* *--* ---- ---- ---- ---- ---- ---- ---* -*-- 
+> shift 9 
+-**- *--- *-*- **-- *-** --*- ---- ---- ---- ---- ---- ---- --*- *--- ---- ---- 
+> shift -9 
+---- ---- --** -*-- -*-* -**- -*-* *--* ---- ---- ---- ---- ---- ---- ---* -*-- 
+> toggle -1 0xF0F0F0F0 
+**** **** **-- *-** *-*- *--* *-*- -**- **** ---- **** ---- **** ---- ***- -*-- 
+> rotate 8 
+**-- *-** *-*- *--* *-*- -**- **** ---- **** ---- **** ---- ***- -*-- **** **** 
+> rotate -8 
+**** **** **-- *-** *-*- *--* *-*- -**- **** ---- **** ---- **** ---- ***- -*-- 
+> ripple 6 
+**** **** *--* -*** -*-* --** -*-- **-* ***- ---* ***- ---* ***- ---* **-- *--* 
+**** **** --*- ***- *-*- -**- *--* *-** **-- --** **-- --** **-- --** *--* --** 
+**** ***- -*-* **-* -*-- **-* --** -*** *--- -*** *--- -*** *--- -*** --*- -*** 
+**** **-- *-** *-*- *--* *-*- -**- **** ---- **** ---- **** ---- ***- -*-- **** 
+**** *--* -*** -*-* --** -*-- **-* ***- ---* ***- ---* ***- ---* **-- *--* **** 
+**** --*- ***- *-*- -**- *--* *-** **-- --** **-- --** **-- --** *--* --** **** 
+> ripple -6 
+**** *--* -*** -*-* --** -*-- **-* ***- ---* ***- ---* ***- ---* **-- *--* **** 
+**** **-- *-** *-*- *--* *-*- -**- **** ---- **** ---- **** ---- ***- -*-- **** 
+**** ***- -*-* **-* -*-- **-* --** -*** *--- -*** *--- -*** *--- -*** --*- -*** 
+**** **** --*- ***- *-*- -**- *--* *-** **-- --** **-- --** **-- --** *--* --** 
+**** **** *--* -*** -*-* --** -*-- **-* ***- ---* ***- ---* ***- ---* **-- *--* 
+**** **** **-- *-** *-*- *--* *-*- -**- **** ---- **** ---- **** ---- ***- -*-- 
+> shift 64 
+**** **** **-- *-** *-*- *--* *-*- -**- **** ---- **** ---- **** ---- ***- -*-- 
+> shift 65 
+**** **** *--* -*** -*-* --** -*-- **-* ***- ---* ***- ---* ***- ---* **-- *--- 
+> shift -64 
+**** **** *--* -*** -*-* --** -*-- **-* ***- ---* ***- ---* ***- ---* **-- *--- 
+> shift -65 
+-*** **** **-- *-** *-*- *--* *-*- -**- **** ---- **** ---- **** ---- ***- -*-- 
+> error 
+ 
+	Bad command. Type "help" for more info.
+
+ 
+Example reading commands from a file. 
+% ./pa2 input 
+set 2 3 
+clear 5 
+toggle 0x55 3 
+shift -3 
+set 5 
+quit 
+  
+% ./pa2 input 
+---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
+---- ---- ---- ---- ---- ---- ---- --*- ---- ---- ---- ---- ---- ---- ---- --** 
+ 
+A 2nd argument is required for this command. 
+     
+---- ---- ---- ---- ---- ---- -*-* -*** ---- ---- ---- ---- ---- ---- ---- ---- 
+---- ---- ---- ---- ---- ---- ---- *-*- ***- ---- ---- ---- ---- ---- ---- ---- 
+      
+A 2nd argument is required for this command. 
+
+
+Anything else: start early on this assignment. Also this prints out
+the lights of you choice.
+
+1) type bt to print a backtrace of the stack frame
+
+2) type: display/i $pc
+
+3) type: $
+
+4) type: V
+
+5) type: Vu
+
+6) Type: ls -a

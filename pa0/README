@@ -1,0 +1,75 @@
+Name: Adrian Jimenez
+
+Login: cs30xib
+
+Description: This program passes a name and birth date and displays a message
+             with the name and their birth date that was passed in.
+
+How to compile: typing "make" in the command prompt.
+
+How to run it: typing "./a.out" in the command prompt.
+
+An example of a normal output is when there is no warnings caught by lint or
+errors caught by the compiler, assembler, or linker. Also when we get the
+output we're looking for, in this assignment we were expecting a message that
+says:
+	"Hello, my name is: Joe Jane Student
+	 My birth date is: December 17, 1990
+	 The sum of 1, 2, and 3 = 6"
+The normal output of the entire program goes to stdout and each C or assembly
+file goes to file.
+
+An example of abnormal/error is when there is warnings caught by lint or errors
+caught by the compiler, assembler, or linker. When this occurs no output is
+created. Sometimes it is not caught and we just get an output that is
+incorrect. When it is caught it goes to stderr.
+
+I tested my program by matching it with the solutions file both manually and
+using the diff command.
+
+If you have not read the assignment write-up this assignment contains 2 C files,
+2 source files, and a header file.
+
+1) 40
+	char name[] = NAME;		/* A student's name */
+
+2) It goes into the next executable line which is line 42.
+	it skips line 41 and goes to line 42 because 41 is a functtion call
+
+3) It gives you the address
+	0xffbff040:	<Address 0xffbff040 out of bounds>
+
+4) 36
+
+5) A breakpoint is a marker where you want you program to stop.
+	You set one when in debugging mode and type break and the name
+	of the file.
+
+6) foobar() is the function.
+
+7) step means executing one more step of the program and next only stops at the
+   first instruction of a source line.
+	The stepi/nexti steps through functions without debugging information.
+
+8) registers
+
+9) the x command examines data in memory at a specified address and prints it
+   in a specified format while the p command prints the value of any expression
+   and that expression can include subroutine calls and assignmetns.
+
+   use p to look at the contents of a register
+
+   use x to look at something in memory
+
+   x/s displays the address and p/d displays the value
+
+   /s is for string and /d for decimal
+
+10) git rm
+
+11) git status
+
+12) .gitignore
+	*.[extension]
+
+13) the Git directory

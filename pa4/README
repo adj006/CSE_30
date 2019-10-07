@@ -1,0 +1,62 @@
+Filename: README
+
+Author: Adrian Jimenez
+
+Userid: cs30xib
+
+Description: The purpose of the program is to learn how the ls works
+
+Date: Dec. 4, 2013
+
+Sources of Help: Discussion and tutors.
+
+How to compile: Typing "make" in the command prompt.
+
+How to run it:
+	typing "the executable file", "the option flag", and "file/directory"
+	in the command prompt.
+
+An example of normal output: type "./myls"
+.:
+Makefile
+README
+buildFileInfoTable.c
+buildFileInfoTable.ln
+buildFileInfoTable.o
+displayFileInfo.c
+displayFileInfo.ln
+displayFileInfo.o
+displayGroupName.s
+displayOwnerName.c
+displayOwnerName.ln
+displayOwnerName.o
+displayPermissions.c
+displayPermissions.ln
+displayPermissions.o
+mtimeSortAscending.c
+mtimeSortAscending.ln
+mtimeSortAscending.o
+mtimeSortDescending.s
+myls
+myls.c
+myls.h
+myls.ln
+myls.o
+nameSortAscending.s
+nameSortDescending.c
+nameSortDescending.ln
+nameSortDescending.o
+pa4test
+
+
+An example of abnormal/error output: type "./myls -g"
+./myls: illegal option -- g
+Usage: ./myls [-alrt] [file ...]
+
+
+How I tested program:
+	I tested this program by testing all the files provided in the readme
+	and also tested all the option flags and compared it with the pa4test.
+
+Anything else: start early on this assignment. Also this prints out
+               similar to the unix "ls" command.

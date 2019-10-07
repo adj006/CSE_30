@@ -1,0 +1,47 @@
+Filename: README
+
+Author: Adrian Jimenez
+
+Userid: cs30xib
+
+Description: The purpose of the program is to find out the various anagrams
+             of a word read from stdin.
+
+Date: Nov. 8, 2013
+
+Sources of Help: Discussion and tutors.
+
+How to compile: Typing "make" in the command prompt.
+
+How to run it: 2 cases
+	case 1: typing "the file name" in the command prompt.
+
+	case 2: typing "the file name, --build, and /usr/dict/words"
+
+An example of normal output: type "./anagrams --build /usr/dict/words"
+                             in command prompt.
+
+Anagram database file "anagrams.dat" built.
+
+An example of abnormal/error output: type "./anagrams --build"
+
+Usage: anagrams [--build dictionary_file] 
+
+How I tested program:
+./anagrams 
+ 
+Enter a word to search for anagrams [^D to exit]: 
+ 
+Enter a word to search for anagrams [^D to exit]: tops 
+Anagram(s) are: post spot stop 
+  
+Enter a word to search for anagrams [^D to exit]: angel 
+Anagram(s) are: Galen Lange angel angle glean 
+ 
+Enter a word to search for anagrams [^D to exit]: fubar 
+No anagrams found.
+
+Anything else: start early on this assignment. Also this prints out
+               the anagrams from the word you entered.
+
+
